@@ -1,0 +1,11 @@
+[package]
+name = "ssh_boilerplate"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+crossterm = "0.29.0"
+dotenvy = "0.15.7"
+russh = "0.62.5"
+tokio = { version = "1.53.1", features = ["rt-multi-thread", "macros", "net", "time", "io-std"] }
