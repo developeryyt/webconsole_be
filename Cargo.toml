@@ -5,7 +5,13 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1.0.104"
-crossterm = "0.29.0"
+axum = { version = "0.8.9", features = ["ws"] }
 dotenvy = "0.15.7"
+futures-util = "0.3.34"
 russh = "0.62.5"
-tokio = { version = "1.53.1", features = ["rt-multi-thread", "macros", "net", "time", "io-std"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+thiserror = "2.0.20"
+tokio = { version = "1.53.1", features = ["rt-multi-thread", "macros", "net", "time", "io-std", "sync"] }
+tower-http = { version = "0.7.0", features = ["cors"] }
+uuid = { version = "1.25.0", features = ["v4", "serde"] }
